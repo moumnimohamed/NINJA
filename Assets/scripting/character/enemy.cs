@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-
+public bool Iambug=false;
     public  bool move=false;
     public  bool idle=false;
     public  bool facengleft=false;
@@ -54,12 +54,22 @@ bool enmyDead=false;
     // Update is called once per frame
     void Update()
     {
-
+    if (!Iambug)
+  {
+    
         if (  walltouch || !groundtouch  )
         {
             Flip();
              runspeedvalue=runspeedvalue*-1;
         }
+}else
+{
+    if (  walltouch   )
+        {
+            Flip();
+             runspeedvalue=runspeedvalue*-1;
+        }
+}
 
 
          

@@ -66,15 +66,13 @@ isgrounded= Physics2D.OverlapCircle(groundcheck.position,checkradius,whatisgroun
  
 void Update()
 {
-/*jump when slide in wall */
-   if (walltouch && !isgrounded && Input.GetKeyDown(KeyCode.UpArrow)  && dead==false)
-{
-      extrajump=extrajumpsvalue;
-          rb.velocity=Vector2.up*jumpForce;
-          Flip();
-    runspeedvalue=runspeedvalue*-1;
 
-}
+
+/*  flim and move if wall touch */
+ if (walltouch)
+ {
+     moveFunc();
+ }
 
 
     /*silde in wall */
@@ -105,13 +103,7 @@ void Update()
 			timeElapsed += Time.deltaTime;
 }
 
-/*run  move */
-if (isgrounded   && dead==false &&  ( walltouch   || Input.GetKeyDown(KeyCode.RightArrow)   ) )
-{
-  
-    Flip();
-    runspeedvalue=runspeedvalue*-1;
-}
+
 
 /*if grounded */
 
@@ -126,21 +118,9 @@ if (isgrounded   && dead==false &&  ( walltouch   || Input.GetKeyDown(KeyCode.Ri
          AnimState(2);
     }
 
- 
 
 
-    if (Input.GetKeyDown(KeyCode.UpArrow) && extrajump >0     && iamAttaking==false  && dead==false)
-    {
-            jumpEffect();
-        rb.velocity=Vector2.up*jumpForce;
-        extrajump--;
-    }
-    else if (Input.GetKeyDown(KeyCode.UpArrow) && extrajump < 0   && iamAttaking==false  && dead==false )
-    {/*double jump */
-            jumpEffect();           
-        rb.velocity=Vector2.up*jumpForce;
-          
-    }  
+   
 
 /*attack animation */
 
@@ -151,8 +131,8 @@ if (isgrounded   && dead==false &&  ( walltouch   || Input.GetKeyDown(KeyCode.Ri
           Collider2D [] enemiestoDammage=Physics2D.OverlapBoxAll(attackPos.position,new Vector2(attackRangeX,attackRangeY),0,whatIsenmies);
  for (int i = 0; i < enemiestoDammage.Length; i++)
  {
-    enemiestoDammage[i].GetComponent<Collider2D>().enabled = false;
     enemiestoDammage[i].GetComponent<enemy>().takeDammage(1);
+    enemiestoDammage[i].GetComponent<Collider2D>().enabled = false;
     /*push enmy */
     Rigidbody2D rbeenmy=enemiestoDammage[i].GetComponent<Rigidbody2D>();
     rbeenmy.isKinematic=true;
@@ -215,6 +195,42 @@ public void  stopAttack(){
 void AnimState (int value){
      animator.SetInteger("animstate",value);
 }
+
+    
+ public  void jumpFunc(){
+      if ( extrajump >0    && iamAttaking==false  && dead==false)
+    {
+            jumpEffect();
+        rb.velocity=Vector2.up*jumpForce;
+        extrajump--;
+    }
+    else if ( extrajump < 0   && iamAttaking==false  && dead==false )
+    {/*double jump */
+            jumpEffect();           
+        rb.velocity=Vector2.up*jumpForce;
+          
+    } 
+    /*jump when slide in wall */
+   if (walltouch && !isgrounded /*&& Input.GetKeyDown(KeyCode.UpArrow) */ && dead==false)
+{
+      extrajump=0;
+          rb.velocity=Vector2.up*jumpForce;
+          Flip();
+    runspeedvalue=runspeedvalue*-1;
+
+}
+}
+
+ public  void moveFunc(){
+
+     /*run  move */
+if (isgrounded   && dead==false  )
+{
+  
+    Flip();
+    runspeedvalue=runspeedvalue*-1;
+}
+ }
 
     
  
