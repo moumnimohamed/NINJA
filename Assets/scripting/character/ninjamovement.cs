@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ninjamovement : MonoBehaviour
 {
+     public int health;
+     public  int healthValue;
 
 public Transform attackPos;
     public LayerMask whatIsenmies;
@@ -20,6 +22,7 @@ public bool amAttaking =false;
     // Start is callded before the first frame update
     void Start()
     {
+        healthValue=health;
         rb=GetComponent<Rigidbody2D>();
         animator=GetComponent<Animator>();
 
@@ -33,44 +36,44 @@ public bool amAttaking =false;
           transform.localScale=scaler;
  }
 
-   
-
     // Update is called once per frame
     void Update()
     {
         movement.x=Input.GetAxisRaw("Horizontal");
          movement.y=Input.GetAxisRaw("Vertical");
-
-       
-
          
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-       rb.MovePosition(rb.position + movement * moveSped *Time.fixedDeltaTime);
+           
+            rb.MovePosition(rb.position + movement * moveSped *Time.fixedDeltaTime);
    
      animator.SetFloat("horizontal",movement.x);
          animator.SetFloat("speed",movement.sqrMagnitude);
          if(movement.x >0){
+             
          Flip (0.5f);
 
          }else if(movement.x <0)
          {
          Flip (-0.5f);
              
-         }
+         
+        }
+       
 
 
          
     /*attack animation */
 
-    if (Input.GetKeyDown(KeyCode.Space)  &&  amAttaking==false)
+    if (Input.GetKeyDown(KeyCode.Z)  &&  amAttaking==false)
     {
-         amAttaking=true;
+        
          //play random  animation
          Random rnd = new Random();
                   int animRang   = Random.Range(1, 3);
+                  Debug.Log(animRang);
                   if (animRang==1)
                   {
          animator.SetBool("attack",true);
@@ -81,32 +84,37 @@ public bool amAttaking =false;
                       
                   }
 
-          Collider2D [] enemiestoDammage=Physics2D.OverlapBoxAll(attackPos.position,new Vector2(attackRangeX,attackRangeY),0,whatIsenmies);
- for (int i = 0; i < enemiestoDammage.Length; i++)
- {
-    enemiestoDammage[i].GetComponent<foxEnmy>().takeDammage(1);
-    enemiestoDammage[i].GetComponent<Collider2D>().enabled = false;
-    /*push enmy */
-    Rigidbody2D rbeenmy=enemiestoDammage[i].GetComponent<Rigidbody2D>();
-   rbeenmy.isKinematic=true;
- rbeenmy.AddForce(transform.right *moveSped*1000);
- }
-   //rb.AddForce(transform.right *runspeedvalue*120);
+                
         
     }
     }
 
 
+public void Attack (){
+     // Time.timeScale = .2f;
+         amAttaking=true;
+
+          Collider2D [] enemiestoDammage=Physics2D.OverlapBoxAll(attackPos.position,new Vector2(attackRangeX,attackRangeY),0,whatIsenmies);
+ for (int i = 0; i < enemiestoDammage.Length; i++)
+ {
+    enemiestoDammage[i].GetComponent<foxEnmy>().takeDammage(1);
+   
+ }
+ 
+}
+
  
 
     public void stopAttack () {
          animator.SetBool("attack",false);
+        
          amAttaking=false;
+       //  Time.timeScale = 1f;
     }
 
      public void stopAttack2 () {
-         animator.SetBool("attack2",false);
-          amAttaking=false;
+             animator.SetBool("attack2",false);
+         amAttaking=false;
     }
 
 
@@ -117,4 +125,16 @@ public bool amAttaking =false;
         Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX,attackRangeY,1));
     }
 
+ public void  DammageNinja (int dmg){
+         healthValue-=dmg;
+         if (healthValue<=0)
+         {
+             
+            
+             //enmyDead=true;
+              Destroy(gameObject);
+            //AnimState(3);
+            
+         }
+    }
  }

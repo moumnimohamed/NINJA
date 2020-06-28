@@ -131,7 +131,7 @@ void Update()
           Collider2D [] enemiestoDammage=Physics2D.OverlapBoxAll(attackPos.position,new Vector2(attackRangeX,attackRangeY),0,whatIsenmies);
  for (int i = 0; i < enemiestoDammage.Length; i++)
  {
-    enemiestoDammage[i].GetComponent<enemy>().takeDammage(1);
+    /* enemiestoDammage[i].GetComponent<enemy>().takeDammage(1); */
     enemiestoDammage[i].GetComponent<Collider2D>().enabled = false;
     /*push enmy */
     Rigidbody2D rbeenmy=enemiestoDammage[i].GetComponent<Rigidbody2D>();
