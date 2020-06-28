@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ninja
+  - loadScene
   layers:
   - Default
   - TransparentFX

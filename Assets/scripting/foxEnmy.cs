@@ -194,14 +194,14 @@ public void stopAttack(){
 IEnumerator startAttackAgain() 
 {
      
-        this.gameObject.GetComponent<patrol>().enabled =false;
+       /*  this.gameObject.GetComponent<patrol>().enabled =false; */
     this.gameObject.GetComponent<foxEnmy>().enabled =true;
             yield return new WaitForSeconds(Random.Range(4,8)); 
 }
 
 IEnumerator startPatrol() 
 {
-        this.gameObject.GetComponent<patrol>().enabled =true;
+       /*  this.gameObject.GetComponent<patrol>().enabled =true; */
     this.gameObject.GetComponent<foxEnmy>().enabled =false;
      yield return new WaitForSeconds(Random.Range(4,8)); 
      StartCoroutine("startAttackAgain");
