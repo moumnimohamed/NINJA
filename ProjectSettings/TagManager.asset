@@ -43,3 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: lantern
+    uniqueID: 1568445761
+    locked: 0
+  - name: ninja
+    uniqueID: 2590383307
+    locked: 0
+  - name: ui
+    uniqueID: 1479191717
+    locked: 0
