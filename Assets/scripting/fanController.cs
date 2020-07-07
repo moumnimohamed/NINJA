@@ -29,11 +29,14 @@ public class fanController : MonoBehaviour
                  
                 // we want 2m away from the camera position
                 Vector3 touchPosition = Camera.current.ScreenToWorldPoint(touch.position);
-                touchPosition.z = 0f;
+            
                 transform.position = touchPosition;
 
                 /*apply wind*/
                  Vector3 vectorToTarget = targetTransform.position - transform.position;
+                
+                    Debug.Log(vectorToTarget.x);
+                  
              float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
              Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
              transform.rotation = Quaternion.Slerp(transform.rotation, q, speed);

@@ -14,6 +14,7 @@ public class foxEnmy : MonoBehaviour
     public float attackRangeX;
     public float attackRangeY;
  
+ public bool grounded;
     
 bool enmyDead=false;
     public int health;
@@ -168,13 +169,13 @@ public Transform player;
 
 public void attack (){
    
-         Collider2D [] enemiestoDammage=Physics2D.OverlapBoxAll(attackPos.position,new Vector2(attackRangeX,attackRangeY),0,whatIsenmies);
+      /*    Collider2D [] enemiestoDammage=Physics2D.OverlapBoxAll(attackPos.position,new Vector2(attackRangeX,attackRangeY),0,whatIsenmies);
  for (int i = 0; i < enemiestoDammage.Length; i++)
  {
     enemiestoDammage[i].GetComponent<ninjamovement>().DammageNinja(1);
      
 
- }
+ } */
 }
 
     void AnimState (int value){

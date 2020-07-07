@@ -7,13 +7,18 @@ public class winning : MonoBehaviour
 
     public loadScenes loadSceneScript;
     public Animator animator;
+    public bool light;
 
     /* public Light2D pointLight; */
     // Start is called before the first frame update
     void Awake()
     {
+        
         loadSceneScript = GameObject.FindGameObjectWithTag("loadScene").GetComponent<loadScenes>();
         animator = GetComponent<Animator>();
+        if(light){
+            animator.SetBool("start", true);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
