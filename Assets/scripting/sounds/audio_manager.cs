@@ -35,4 +35,15 @@ public static audio_manager instance;
 	s.source.Play();
 	}
 }
+
+public void stop (string name){
+	sound s=	Array.Find (Sounds,sound=>sound.name==name);
+	if(s==null){
+		Debug.LogWarning("sound: "+ name +" dosnt found");
+		return;
+	}else{
+	s.source.Pause();
+	}
+}
+
 }

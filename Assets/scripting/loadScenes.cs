@@ -22,27 +22,25 @@ public class loadScenes : MonoBehaviour
 
     void Start()
     {
-        sound[] Sounds = FindObjectOfType<audio_manager>().Sounds;
-
-        foreach (sound s in Sounds)
-        {
-
-            s.source.volume = s.volume;
-
-        }
+         FindObjectOfType<audio_manager>().Play("japanMusic");
 
     }
 
     // Update is called once per frame
     public void LoadNextLevel()
     {
-        AudioSource[] Sounds = FindObjectOfType<audio_manager>().GetComponents<AudioSource>();
+
+         FindObjectOfType<audio_manager>().stop("japanMusic");
+        /* AudioSource[] Sounds = FindObjectOfType<audio_manager>().GetComponents<AudioSource>();
         foreach (AudioSource s in Sounds)
         {
 
             s.volume = 0;
 
-        }
+        } */
+
+         FindObjectOfType<audio_manager>().Play("taiko"); 
+
         StartCoroutine(loadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 
     }
@@ -51,6 +49,7 @@ public class loadScenes : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         transition.SetTrigger("start");
+          
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(levelIndex);
 
