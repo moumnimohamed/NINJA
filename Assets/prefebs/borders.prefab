@@ -42,7 +42,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -11}
@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1c1e34411590e4bba1d735d57bf5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadSceneScript: {fileID: 0}
+  ninja: {fileID: 0}
 --- !u!1 &3059868641971969550
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +114,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 18, y: 0}
@@ -140,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1c1e34411590e4bba1d735d57bf5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadSceneScript: {fileID: 0}
+  ninja: {fileID: 0}
 --- !u!1 &6907474554182882901
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +186,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -18, y: 0}
@@ -210,6 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1c1e34411590e4bba1d735d57bf5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadSceneScript: {fileID: 0}
+  ninja: {fileID: 0}
 --- !u!1 &8175950302782413095
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +292,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 11}
@@ -314,3 +320,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1c1e34411590e4bba1d735d57bf5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadSceneScript: {fileID: 0}
+  ninja: {fileID: 0}

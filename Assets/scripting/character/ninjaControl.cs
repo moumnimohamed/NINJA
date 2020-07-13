@@ -7,6 +7,7 @@ public class ninjaControl : MonoBehaviour
     // Start is called before the first frame update
 
   public bool   grounded ;
+  public bool   alive =true;
 public Transform groundCheck;
 public float checkRadius;
 public LayerMask whaIsGround;
@@ -24,9 +25,9 @@ public LayerMask whaIsGround;
     }
     void Update()
     {
-        if(grounded){
+        if(grounded && alive){
             animator.SetInteger("animstate",0);
-        }else{
+        }else if ( !grounded && alive ){
               animator.SetInteger("animstate",1);
         }
         

@@ -44,6 +44,23 @@ public class loadScenes : MonoBehaviour
         StartCoroutine(loadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 
     }
+    public void LoadSameLevel()
+    {
+
+         FindObjectOfType<audio_manager>().stop("japanMusic");
+        /* AudioSource[] Sounds = FindObjectOfType<audio_manager>().GetComponents<AudioSource>();
+        foreach (AudioSource s in Sounds)
+        {
+
+            s.volume = 0;
+
+        } */
+
+         FindObjectOfType<audio_manager>().Play("taiko"); 
+
+        StartCoroutine(loadLevel(SceneManager.GetActiveScene().buildIndex ));
+
+    }
 
     IEnumerator loadLevel(int levelIndex)
     {

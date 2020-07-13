@@ -42,7 +42,7 @@ public void stop (string name){
 		Debug.LogWarning("sound: "+ name +" dosnt found");
 		return;
 	}else{
-	s.source.Pause();
+	s.source.Stop();
 	}
 }
 

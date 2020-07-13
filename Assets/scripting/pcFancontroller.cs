@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fanController : MonoBehaviour
+public class pcFancontroller : MonoBehaviour
 {
 
     public Transform targetTransform;
-    Vector3 touchPosition ;
     AreaEffector2D AreaEffector;
     SpriteRenderer spriteRenderer;
-    public float speed;
+     
     // Start is called before the first frame update
     void Start()
     {
-         targetTransform=GameObject.FindGameObjectWithTag("ninja").GetComponent<Transform>();
-       
         AreaEffector = GetComponent<AreaEffector2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -23,16 +20,11 @@ public class fanController : MonoBehaviour
     void Update()
     {
 
-
-        if (Input.touchCount > 0)
+        if (Input.GetMouseButton(0) )
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
-            {
-                 
                 // we want 2m away from the camera position
-                  touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-            
+                Vector3 touchPosition = Camera.current.ScreenToWorldPoint(Input.mousePosition);
+                touchPosition.z = 0f;
                 transform.position = touchPosition;
 
                 /*apply wind*/
@@ -42,10 +34,10 @@ public class fanController : MonoBehaviour
                   
              float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
              Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-             transform.rotation = Quaternion.Slerp(transform.rotation, q, speed);
+             transform.rotation = Quaternion.Slerp(transform.rotation, q, 1f);
              AreaEffector.enabled=true; 
              spriteRenderer.enabled=true; 
-            }else  if (touch.phase == TouchPhase.Ended)
+            }else  
             {
                
              AreaEffector.enabled=false; 
@@ -53,7 +45,7 @@ public class fanController : MonoBehaviour
             }
 
              
-        }
+        
 
     }
 
