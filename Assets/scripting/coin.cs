@@ -4,45 +4,28 @@ using UnityEngine;
 
 public class coin : MonoBehaviour
 {
- public Animator animator ;
+    public Animator animator;
     // Start is called before the first frame update
-    public Transform ninja ;
-    public Vector3 coinPosFromNinja ;
-    public float speed ;
-      private bool moveCoin =false;
+
 
     void Start()
     {
-          animator=GetComponent<Animator>();
-             ninja =  GameObject.FindGameObjectWithTag("ninja").GetComponent<Transform>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {  
-        if(moveCoin){
-  transform.position = Vector2.MoveTowards(transform.position,ninja.position+coinPosFromNinja, speed*Time.deltaTime);
-        }
-        
-    }
-
+    // Update is called once per frame 
     void OnTriggerEnter2D(Collider2D col)
     {
 
         if (col.tag == "ninja")
         {
-                moveCoin=true;
-                StartCoroutine("startCoin");
-         }
+             
+            FindObjectOfType<audio_manager>().Play("coin");
+            animator.SetBool("coin", true);
+        }
     }
 
 
-    IEnumerator startCoin() 
-{
-        
-     
-            yield return new WaitForSeconds(3); 
-            animator.SetBool("coin",true);
-}
+
 }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ninja
   - loadScene
+  - fan
   layers:
   - Default
   - TransparentFX

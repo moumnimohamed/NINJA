@@ -8,13 +8,19 @@ public class pcFancontroller : MonoBehaviour
     public Transform targetTransform;
     AreaEffector2D AreaEffector;
     SpriteRenderer spriteRenderer;
+
+    public GameObject fanChild;
+    private Animator fanAnimator;
      
     // Start is called before the first frame update
     void Start()
-    {
+    { 
+        fanChild =  GameObject.FindGameObjectWithTag("fan") ;
+        fanAnimator = fanChild.GetComponent<Animator>();
+           targetTransform =  GameObject.FindGameObjectWithTag("ninja").GetComponent<Transform>();
         AreaEffector = GetComponent<AreaEffector2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+          }
 
     // Update is called once per frame
     void Update()
@@ -23,10 +29,11 @@ public class pcFancontroller : MonoBehaviour
         if (Input.GetMouseButton(0) )
         {
                 // we want 2m away from the camera position
-                Vector3 touchPosition = Camera.current.ScreenToWorldPoint(Input.mousePosition);
+                fanAnimator.SetBool("openfan",true);
+                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 touchPosition.z = 0f;
                 transform.position = touchPosition;
-
+                fanChild.transform.position = touchPosition;
                 /*apply wind*/
                  Vector3 vectorToTarget = targetTransform.position - transform.position;
                 
@@ -39,7 +46,7 @@ public class pcFancontroller : MonoBehaviour
              spriteRenderer.enabled=true; 
             }else  
             {
-               
+                fanAnimator.SetBool("openfan",false);
              AreaEffector.enabled=false; 
              spriteRenderer.enabled=false; 
             }
