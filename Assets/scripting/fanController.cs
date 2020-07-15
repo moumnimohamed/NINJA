@@ -6,15 +6,22 @@ public class fanController : MonoBehaviour
 {
 
     public Transform targetTransform;
-    Vector3 touchPosition ;
+    Vector3 touchPosition;
     AreaEffector2D AreaEffector;
     SpriteRenderer spriteRenderer;
     public float speed;
     // Start is called before the first frame update
+
+    public GameObject fanChild;
+    private Animator fanAnimator;
     void Start()
     {
-         targetTransform=GameObject.FindGameObjectWithTag("ninja").GetComponent<Transform>();
-       
+
+        fanChild = GameObject.FindGameObjectWithTag("fan");
+        fanAnimator = fanChild.GetComponent<Animator>();
+        fanChild.GetComponent<SpriteRenderer>().enabled = false;
+
+        targetTransform = GameObject.FindGameObjectWithTag("ninja").GetComponent<Transform>();
         AreaEffector = GetComponent<AreaEffector2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -29,30 +36,31 @@ public class fanController : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
-                 
+                fanAnimator.SetBool("openfan", true);
                 // we want 2m away from the camera position
-                  touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-            
-                transform.position = touchPosition;
+                touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
+                transform.position = touchPosition;
+                fanChild.transform.position = touchPosition;
                 /*apply wind*/
-                 Vector3 vectorToTarget = targetTransform.position - transform.position;
-                
-                    Debug.Log(vectorToTarget.x);
-                  
-             float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-             Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-             transform.rotation = Quaternion.Slerp(transform.rotation, q, speed);
-             AreaEffector.enabled=true; 
-             spriteRenderer.enabled=true; 
-            }else  if (touch.phase == TouchPhase.Ended)
+                Vector3 vectorToTarget = targetTransform.position - transform.position;
+
+                Debug.Log(vectorToTarget.x);
+
+                float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+                Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, q, speed);
+                AreaEffector.enabled = true;
+                spriteRenderer.enabled = true;
+            }
+            else if (touch.phase == TouchPhase.Ended)
             {
-               
-             AreaEffector.enabled=false; 
-             spriteRenderer.enabled=false; 
+                fanAnimator.SetBool("openfan", false);
+                AreaEffector.enabled = false;
+                spriteRenderer.enabled = false;
             }
 
-             
+
         }
 
     }

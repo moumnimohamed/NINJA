@@ -1618,6 +1618,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2548320476829827321, guid: c43bf4e598444964ab42dfdb8a74d08f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3478728561841316145, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_Tiles.Array.size

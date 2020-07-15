@@ -1775,39 +1775,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 75383329, guid: 96c288f7901fc474d873b506a75c5dd7, type: 3}
-      propertyPath: fanChild
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7950580293159380978, guid: 96c288f7901fc474d873b506a75c5dd7,
         type: 3}
       propertyPath: m_Name
       value: Fan
-      objectReference: {fileID: 0}
-    - target: {fileID: 7950580293159380990, guid: 96c288f7901fc474d873b506a75c5dd7,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7950580293159380990, guid: 96c288f7901fc474d873b506a75c5dd7,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7950580293159380990, guid: 96c288f7901fc474d873b506a75c5dd7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-    - target: {fileID: 7950580293159380990, guid: 96c288f7901fc474d873b506a75c5dd7,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7950580293159380990, guid: 96c288f7901fc474d873b506a75c5dd7,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7950580293159380991, guid: 96c288f7901fc474d873b506a75c5dd7,
         type: 3}
@@ -1817,7 +1788,7 @@ PrefabInstance:
     - target: {fileID: 7950580293159380991, guid: 96c288f7901fc474d873b506a75c5dd7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7950580293159380991, guid: 96c288f7901fc474d873b506a75c5dd7,
         type: 3}

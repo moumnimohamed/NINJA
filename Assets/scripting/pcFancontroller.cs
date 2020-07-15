@@ -17,6 +17,7 @@ public class pcFancontroller : MonoBehaviour
     { 
         fanChild =  GameObject.FindGameObjectWithTag("fan") ;
         fanAnimator = fanChild.GetComponent<Animator>();
+        fanChild.GetComponent<SpriteRenderer>().enabled =false;
            targetTransform =  GameObject.FindGameObjectWithTag("ninja").GetComponent<Transform>();
         AreaEffector = GetComponent<AreaEffector2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();

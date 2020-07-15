@@ -1814,6 +1814,16 @@ PrefabInstance:
       propertyPath: m_TileMatrixArray.Array.data[3].m_Data.e32
       value: 3.36e-43
       objectReference: {fileID: 0}
+    - target: {fileID: 2392324223089453857, guid: c43bf4e598444964ab42dfdb8a74d08f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548320476829827321, guid: c43bf4e598444964ab42dfdb8a74d08f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3478728561841316145, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -2525,12 +2535,12 @@ PrefabInstance:
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_Tiles.Array.size
-      value: 103
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
@@ -2695,7 +2705,7 @@ PrefabInstance:
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_TileAssetArray.Array.data[10].m_RefCount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
@@ -2706,7 +2716,7 @@ PrefabInstance:
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[18].m_RefCount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
@@ -2717,7 +2727,7 @@ PrefabInstance:
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_TileMatrixArray.Array.data[0].m_RefCount
-      value: 103
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
@@ -2757,7 +2767,7 @@ PrefabInstance:
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_TileColorArray.Array.data[0].m_RefCount
-      value: 103
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
@@ -3002,7 +3012,7 @@ PrefabInstance:
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_Size.y
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840004858600, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
@@ -6535,7 +6545,7 @@ PrefabInstance:
     - target: {fileID: 4718066840004858603, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840365164256, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
@@ -6545,7 +6555,7 @@ PrefabInstance:
     - target: {fileID: 4718066840365164262, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4718066840365164263, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
@@ -12917,7 +12927,7 @@ PrefabInstance:
     - target: {fileID: 7857632170596381056, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4718066840004858581, guid: c43bf4e598444964ab42dfdb8a74d08f, type: 3}
