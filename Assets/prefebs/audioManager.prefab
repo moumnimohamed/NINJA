@@ -46,7 +46,7 @@ MonoBehaviour:
   Sounds:
   - name: japanMusic
     clip: {fileID: 8300000, guid: c71bacbe7874d574aa9e819158150996, type: 3}
-    volume: 0.5
+    volume: 0
     loop: 1
     source: {fileID: 0}
   - name: taiko
@@ -57,5 +57,15 @@ MonoBehaviour:
   - name: coin
     clip: {fileID: 8300000, guid: 62fb13c1ec4187943912dd65d63d537d, type: 3}
     volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: dead
+    clip: {fileID: 8300000, guid: 41425ff8120011f41b6ebb77cfda14de, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: wind
+    clip: {fileID: 8300000, guid: cded5163d327c5a41ac957eef89a6b4e, type: 3}
+    volume: 0.5
     loop: 0
     source: {fileID: 0}

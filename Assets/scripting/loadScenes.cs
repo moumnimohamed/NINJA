@@ -41,7 +41,7 @@ public class loadScenes : MonoBehaviour
 
          FindObjectOfType<audio_manager>().Play("taiko"); 
 
-        StartCoroutine(loadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(loadLevel(SceneManager.GetActiveScene().buildIndex + 1,.5f));
 
     }
     public void LoadSameLevel()
@@ -56,15 +56,15 @@ public class loadScenes : MonoBehaviour
 
         } */
 
-         FindObjectOfType<audio_manager>().Play("taiko"); 
+         FindObjectOfType<audio_manager>().Play("dead"); 
 
-        StartCoroutine(loadLevel(SceneManager.GetActiveScene().buildIndex ));
+        StartCoroutine(loadLevel(SceneManager.GetActiveScene().buildIndex,3f ));
 
     }
 
-    IEnumerator loadLevel(int levelIndex)
+    IEnumerator loadLevel(int levelIndex , float sc)
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(sc);
         transition.SetTrigger("start");
           
         yield return new WaitForSeconds(1f);

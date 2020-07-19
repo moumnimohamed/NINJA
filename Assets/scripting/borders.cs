@@ -8,11 +8,13 @@ public class borders : MonoBehaviour
     public loadScenes loadSceneScript;
     public  GameObject ninja;
     private  ninjaControl ninjaCont;
+    public  CameraShake cameraShake;
     private  Animator anim;
     // Start is called before the first frame update
     void Start()
     {
          ninja =  GameObject.FindGameObjectWithTag("ninja") ;
+         cameraShake =  GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>(); ;
          anim =  ninja.GetComponent<Animator>();
          ninjaCont =  ninja.GetComponent<ninjaControl>();
  loadSceneScript = GameObject.FindGameObjectWithTag("loadScene").GetComponent<loadScenes>();
@@ -33,8 +35,9 @@ public class borders : MonoBehaviour
         {
              loadSceneScript.LoadSameLevel();
              ninjaCont.alive=false;
-            
+             cameraShake.shakeDuration=1;
              anim.SetInteger("animstate",6);
+            
         }
     }
 }

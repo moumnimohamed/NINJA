@@ -7,6 +7,9 @@ TagManager:
   - ninja
   - loadScene
   - fan
+  - shuraken
+  - girl
+  - playerPos
   layers:
   - Default
   - TransparentFX

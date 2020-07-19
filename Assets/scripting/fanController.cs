@@ -14,14 +14,18 @@ public class fanController : MonoBehaviour
 
     public GameObject fanChild;
     private Animator fanAnimator;
+      private GameObject ninja;
+    private SpriteRenderer ninjaSr;
     void Start()
     {
 
         fanChild = GameObject.FindGameObjectWithTag("fan");
         fanAnimator = fanChild.GetComponent<Animator>();
         fanChild.GetComponent<SpriteRenderer>().enabled = false;
+         ninja=GameObject.FindGameObjectWithTag("ninja")  ;
+        targetTransform = ninja.GetComponent<Transform>();
+        ninjaSr=ninja.GetComponent<SpriteRenderer>();
 
-        targetTransform = GameObject.FindGameObjectWithTag("ninja").GetComponent<Transform>();
         AreaEffector = GetComponent<AreaEffector2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -34,12 +38,11 @@ public class fanController : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
-            {
+             
                 fanAnimator.SetBool("openfan", true);
                 // we want 2m away from the camera position
                 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-
+                touchPosition.z = 0f;
                 transform.position = touchPosition;
                 fanChild.transform.position = touchPosition;
                 /*apply wind*/
@@ -52,9 +55,18 @@ public class fanController : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, q, speed);
                 AreaEffector.enabled = true;
                 spriteRenderer.enabled = true;
-            }
-            else if (touch.phase == TouchPhase.Ended)
+
+                 if (vectorToTarget.x > 0)
             {
+                ninjaSr.flipX  = false;
+            }
+            else
+            {
+                ninjaSr.flipX  = true;
+            }
+            
+        }
+           else {
                 fanAnimator.SetBool("openfan", false);
                 AreaEffector.enabled = false;
                 spriteRenderer.enabled = false;
@@ -63,6 +75,6 @@ public class fanController : MonoBehaviour
 
         }
 
-    }
+    
 
 }
