@@ -6,10 +6,13 @@ public class coin : MonoBehaviour
 {
     public Animator animator;
     // Start is called before the first frame update
-
+     public winning Winning;
 
     void Start()
     {
+        Winning =  GameObject.FindGameObjectWithTag("lantern").GetComponent<winning>();;
+       
+ 
         animator = GetComponent<Animator>();
     }
 
@@ -19,7 +22,7 @@ public class coin : MonoBehaviour
 
         if (col.tag == "ninja")
         {
-             
+              Winning.score +=1;
             FindObjectOfType<audio_manager>().Play("coin");
             animator.SetBool("coin", true);
         }

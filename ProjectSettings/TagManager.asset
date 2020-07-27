@@ -10,6 +10,7 @@ TagManager:
   - shuraken
   - girl
   - playerPos
+  - lantern
   layers:
   - Default
   - TransparentFX

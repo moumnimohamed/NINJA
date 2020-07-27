@@ -43,6 +43,12 @@ public class pcFancontroller : MonoBehaviour
     void Update()
     {
 
+        /*shoot cal*/
+        if (Input.GetMouseButton(1))
+        {
+            ninja.GetComponent<ninjaControl>().attack = true;
+        }
+
         if (Input.GetMouseButton(0))
         {
             // we want 2m away from the camera position

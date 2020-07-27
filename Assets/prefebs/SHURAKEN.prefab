@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4498187991787285660}
   - component: {fileID: 3459672600489554661}
   - component: {fileID: 4598542201381657326}
+  - component: {fileID: 9037392643399067960}
   m_Layer: 0
   m_Name: SHURAKEN
   m_TagString: shuraken
@@ -99,3 +100,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.29
+--- !u!50 &9037392643399067960
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9121255109759516110}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

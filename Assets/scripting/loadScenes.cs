@@ -62,6 +62,13 @@ public class loadScenes : MonoBehaviour
 
     }
 
+    public void loadLevel (int levelNbr){
+         StartCoroutine(loadLevel( levelNbr,0 ));
+         
+    }
+
+
+
     IEnumerator loadLevel(int levelIndex , float sc)
     {
         yield return new WaitForSeconds(sc);

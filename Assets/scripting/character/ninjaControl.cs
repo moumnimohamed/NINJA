@@ -8,16 +8,22 @@ public class ninjaControl : MonoBehaviour
 
     public bool grounded;
     public bool alive = true;
+    public bool attack = false;
+    public Rigidbody2D bullet;
+    public float bulletSpeed;
+
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whaIsGround;
 
     public Animator animator;
+
     private Rigidbody2D rb;
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -27,21 +33,27 @@ public class ninjaControl : MonoBehaviour
     }
     void Update()
     {
-        if (grounded && alive)
+
+        if (attack)
+        {
+            animator.SetInteger("animstate", 5);
+        }
+
+        if (!attack && grounded && alive)
         {
             animator.SetInteger("animstate", 0);
         }
-        else if (!grounded && alive && rb.velocity.y >= 0.1)
+        else if (!attack && !grounded && alive && rb.velocity.y >= 0.1)
         {
             animator.SetInteger("animstate", 1);
 
         }
-        else if (!grounded && alive && rb.velocity.y < 0)
+        else if (!attack && !grounded && alive && rb.velocity.y < 0)
         {
             animator.SetInteger("animstate", 7);
         }
 
-        if (alive && grounded && Mathf.Abs(rb.velocity.x) > 1)
+        if (!attack && alive && grounded && Mathf.Abs(rb.velocity.x) > 1)
         {
             animator.SetInteger("animstate", 2);
         }
@@ -49,6 +61,20 @@ public class ninjaControl : MonoBehaviour
     }
 
 
+
+    public void shootBullet()
+    {
+        bool flipX = this.GetComponent<SpriteRenderer>().flipX;
+        int der = flipX ? -1 : 1;
+        Vector3 plus = new Vector3( der * 2, 0, 0);
+        Rigidbody2D bulletInstance = Instantiate(bullet,  transform.position + plus, Quaternion.Euler(new Vector3(0, 0, 1))) as Rigidbody2D;
+        bulletInstance.velocity = transform.forward * der * bulletSpeed;
+    }
+
+    public void stopAttack()
+    {
+        attack = false;
+    }
 
 
 
