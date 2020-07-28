@@ -3372,6 +3372,7 @@ GameObject:
   - component: {fileID: 2066616801}
   - component: {fileID: 2066616800}
   - component: {fileID: 2066616799}
+  - component: {fileID: 2066616803}
   m_Layer: 8
   m_Name: tawer0
   m_TagString: Untagged
@@ -3926,6 +3927,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2066616803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066616797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed44c9f690df4c64aa6192ea88216713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 4496896224045225559, guid: 90d36b482183593479ec43d6900d420e, type: 3}
 --- !u!1 &2093603611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,7 +4333,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 396798140, guid: abadb7cb0dd465147a460fcfb4c1967d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 99.999985
       objectReference: {fileID: 0}
     - target: {fileID: 6268953111667268437, guid: abadb7cb0dd465147a460fcfb4c1967d,
         type: 3}

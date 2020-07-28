@@ -120,6 +120,14 @@ bool enmyDead=false;
              
 
         }
+
+          if (col.tag == "shuraken")
+        {
+            Destroy(col.gameObject);
+            takeDammage(1);
+
+            
+        }
     }
 
     void AnimState (int value){

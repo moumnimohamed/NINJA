@@ -66,9 +66,10 @@ public class ninjaControl : MonoBehaviour
     {
         bool flipX = this.GetComponent<SpriteRenderer>().flipX;
         int der = flipX ? -1 : 1;
-        Vector3 plus = new Vector3( der * 2, 0, 0);
+        Vector3 plus = new Vector3( der * 1, 0, 0);
         Rigidbody2D bulletInstance = Instantiate(bullet,  transform.position + plus, Quaternion.Euler(new Vector3(0, 0, 1))) as Rigidbody2D;
         bulletInstance.velocity = transform.forward * der * bulletSpeed;
+         FindObjectOfType<audio_manager>().Play("change");
     }
 
     public void stopAttack()

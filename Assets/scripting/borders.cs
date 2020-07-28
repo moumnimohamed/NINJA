@@ -38,6 +38,11 @@ public class borders : MonoBehaviour
              cameraShake.shakeDuration=1;
              anim.SetInteger("animstate",6);
             
+        } 
+          if (col.tag == "shuraken")
+        {
+            Destroy(col.gameObject);
+            
         }
     }
 }

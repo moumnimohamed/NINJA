@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 236352195}
   - component: {fileID: 236352194}
   - component: {fileID: 236352193}
+  - component: {fileID: 236352197}
   m_Layer: 8
   m_Name: spikes
   m_TagString: Untagged
@@ -1053,6 +1054,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &236352197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236352191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed44c9f690df4c64aa6192ea88216713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 4496896224045225559, guid: 90d36b482183593479ec43d6900d420e, type: 3}
 --- !u!1 &365290118
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,7 +4370,7 @@ Transform:
   - {fileID: 236352192}
   - {fileID: 597741036}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066616797
 GameObject:
@@ -4371,6 +4385,7 @@ GameObject:
   - component: {fileID: 2066616801}
   - component: {fileID: 2066616800}
   - component: {fileID: 2066616799}
+  - component: {fileID: 2066616803}
   m_Layer: 8
   m_Name: platform
   m_TagString: Untagged
@@ -5603,6 +5618,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2066616803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066616797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed44c9f690df4c64aa6192ea88216713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 4496896224045225559, guid: 90d36b482183593479ec43d6900d420e, type: 3}
 --- !u!1 &2093603611
 GameObject:
   m_ObjectHideFlags: 0
@@ -5948,7 +5976,7 @@ PrefabInstance:
     - target: {fileID: 3774520960609251613, guid: 59ba713752c793945ac4ec1fa114755a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3774520960609251613, guid: 59ba713752c793945ac4ec1fa114755a,
         type: 3}

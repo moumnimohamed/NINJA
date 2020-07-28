@@ -825,6 +825,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2548320476829827321, guid: c43bf4e598444964ab42dfdb8a74d08f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3478728561841316145, guid: c43bf4e598444964ab42dfdb8a74d08f,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -10722,7 +10727,7 @@ PrefabInstance:
     - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
         type: 3}
       propertyPath: Sounds.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
         type: 3}
@@ -10768,6 +10773,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Sounds.Array.data[5].loop
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[6].name
+      value: explose
+      objectReference: {fileID: 0}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 49a02a9ec32d7044b855f43581a68982, type: 3}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[6].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[6].loop
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f392eb738405bce4385fb464a3e953d1, type: 3}
