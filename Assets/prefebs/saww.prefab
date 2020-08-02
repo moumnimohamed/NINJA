@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 167863010}
   - component: {fileID: 6059673459959069092}
   - component: {fileID: 4346723876172424006}
+  - component: {fileID: 898051696}
   m_Layer: 0
   m_Name: saww
   m_TagString: Untagged
@@ -128,3 +129,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadSceneScript: {fileID: 0}
   ninja: {fileID: 0}
+  cameraShake: {fileID: 0}
+--- !u!114 &898051696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021525028762720717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed44c9f690df4c64aa6192ea88216713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 4496896224045225559, guid: 90d36b482183593479ec43d6900d420e, type: 3}

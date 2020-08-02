@@ -32,11 +32,12 @@ public class borders : MonoBehaviour
     {
 
         if (col.tag == "ninja")
-        {
-             loadSceneScript.LoadSameLevel();
-             ninjaCont.alive=false;
+        { 
+            ninjaCont.alive=false;
              cameraShake.shakeDuration=1;
              anim.SetInteger("animstate",6);
+             loadSceneScript.LoadSameLevel();
+            
             
         } 
           if (col.tag == "shuraken")

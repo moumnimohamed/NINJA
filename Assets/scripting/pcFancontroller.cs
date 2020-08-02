@@ -44,7 +44,7 @@ public class pcFancontroller : MonoBehaviour
     {
 
         /*shoot cal*/
-        if (Input.GetMouseButton(1))
+        if (Input.GetKeyDown("space"))
         {
             ninja.GetComponent<ninjaControl>().attack = true;
         }

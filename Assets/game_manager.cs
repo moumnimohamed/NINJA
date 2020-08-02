@@ -22,21 +22,20 @@ public class game_manager : MonoBehaviour
 
     
         playerName = PlayerPrefs.GetString("playerName");
-        if (playerName == "ninja")
+        
+             if (playerName == "girl")
         {
-            playerName = "ninja";
-          players[1].transform.GetChild(0).gameObject.SetActive(false);
-            players[0].transform.GetChild(0).gameObject.SetActive(true);
-        }
-        else if (playerName == "girl")
-        {
+             
             playerName = "girl";
              players[1].transform.GetChild(0).gameObject.SetActive(true);
              players[0].transform.GetChild(0).gameObject.SetActive(false);
         }
         else
         {
+           
             playerName = "ninja";
+            players[1].transform.GetChild(0).gameObject.SetActive(false);
+            players[0].transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 

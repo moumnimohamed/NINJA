@@ -16,8 +16,17 @@ public class fanController : MonoBehaviour
     private Animator fanAnimator;
       private GameObject ninja;
     private SpriteRenderer ninjaSr;
-    void Start()
+    void Awake()
     {
+
+         /* PlayerPrefs.DeleteAll(); */
+        string playerName = PlayerPrefs.GetString("playerName");
+        if (playerName != "ninja" && playerName != "girl")
+        { playerName = "ninja"; }
+
+        GameObject player = Instantiate(Resources.Load(playerName) as GameObject);
+        player.transform.position = GameObject.FindGameObjectWithTag("playerPos").transform.position;
+
 
         fanChild = GameObject.FindGameObjectWithTag("fan");
         fanAnimator = fanChild.GetComponent<Animator>();

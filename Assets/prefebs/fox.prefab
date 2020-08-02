@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 596538973937332192}
   - component: {fileID: 1249798609}
   - component: {fileID: 897288434}
+  - component: {fileID: 8080557335086422493}
   m_Layer: 9
   m_Name: fox
   m_TagString: Untagged
@@ -214,10 +215,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Iambug: 0
+  soundName: fox
   move: 1
   idle: 0
   facengleft: 0
-  runspeed: 6
+  runspeed: 4
   runspeedvalue: 0
   health: 1
   animator: {fileID: 0}
@@ -242,9 +244,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.2611531, y: 0}
   serializedVersion: 2
   m_Radius: 0.6353415
+--- !u!58 &8080557335086422493
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596538973937332195}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2611531, y: -0.14}
+  serializedVersion: 2
+  m_Radius: 0.49

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4820801907606982648}
   - component: {fileID: 4820801907606982647}
   - component: {fileID: 4820801907606982646}
+  - component: {fileID: 8169350535655379951}
   m_Layer: 8
   m_Name: platform
   m_TagString: Untagged
@@ -157,6 +158,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8169350535655379951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820801907606982644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed44c9f690df4c64aa6192ea88216713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 4496896224045225559, guid: 90d36b482183593479ec43d6900d420e, type: 3}
 --- !u!1 &4820801907973435913
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +420,7 @@ GameObject:
   - component: {fileID: 4820801909037300693}
   - component: {fileID: 4820801909037300692}
   - component: {fileID: 4820801909037300691}
+  - component: {fileID: 5270726848440541727}
   m_Layer: 8
   m_Name: spikes
   m_TagString: Untagged
@@ -543,6 +558,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadSceneScript: {fileID: 0}
   ninja: {fileID: 0}
+  cameraShake: {fileID: 0}
+--- !u!114 &5270726848440541727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820801909037300689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed44c9f690df4c64aa6192ea88216713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 4496896224045225559, guid: 90d36b482183593479ec43d6900d420e, type: 3}
 --- !u!1 &4820801909266358962
 GameObject:
   m_ObjectHideFlags: 0

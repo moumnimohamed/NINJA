@@ -10727,7 +10727,7 @@ PrefabInstance:
     - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
         type: 3}
       propertyPath: Sounds.Array.size
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
         type: 3}
@@ -10793,6 +10793,36 @@ PrefabInstance:
         type: 3}
       propertyPath: Sounds.Array.data[6].loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[7].name
+      value: fox
+      objectReference: {fileID: 0}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca486492649ea5d43ab09e3c187617e1, type: 3}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[7].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[8].name
+      value: bug
+      objectReference: {fileID: 0}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6191180ab31d39f4d89dbcf1c020743c, type: 3}
+    - target: {fileID: 985172630270925763, guid: f392eb738405bce4385fb464a3e953d1,
+        type: 3}
+      propertyPath: Sounds.Array.data[8].volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f392eb738405bce4385fb464a3e953d1, type: 3}
@@ -10870,8 +10900,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1704583989
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b65c38de312fdf74e8e871a1cb1230ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11144,9 +11174,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1704583989
+  m_SortingLayer: 2
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 940c714a72649484da674544db6fb924, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
